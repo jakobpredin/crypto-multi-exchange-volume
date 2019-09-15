@@ -1,0 +1,9 @@
+//@version=4
+//@author=Jakob Predin
+study(title="Crypto Multi Exchange Volume", shorttitle="CMEV", overlay=false, scale=scale.right, precision=0)
+
+// USER INPUTS
+useQuoteVolume = input(title="Use Quote Volume?", type=input.bool, defval=false)
+emaLength = input(title="EMA length", type=input.integer, defval=12)
+
+// VOLUME FUNCTIONS

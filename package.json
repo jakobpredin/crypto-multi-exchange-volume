@@ -1,0 +1,37 @@
+{
+  "name": "crypto-multi-exchange-volume",
+  "version": "0.1.0",
+  "description": "Crypto Multi Exchange Volume (CMEV) is a Tradingview-compatible indicator which aggregates and plots trading volumes for supported cryptoasset pairs over multiple different cryptoasset exchanges.",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel index.js -d dist && babel src -d dist/src --copy-files",
+    "start": "npm run build && node dist/index.js"
+  },
+  "keywords": [
+    "bitcoin",
+    "btc",
+    "cryptocurrency",
+    "crypto",
+    "multi",
+    "exchange",
+    "volume",
+    "pinescript",
+    "tradingview"
+  ],
+  "author": "Jakob Predin",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.6.0",
+    "@babel/core": "^7.6.0",
+    "@babel/node": "^7.6.1",
+    "@babel/preset-env": "^7.5.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-plugin-transform-runtime": "^6.23.0"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.6.0",
+    "chalk": "^2.4.2",
+    "lodash": "^4.17.11",
+    "node-fetch": "^2.6.0"
+  }
+}

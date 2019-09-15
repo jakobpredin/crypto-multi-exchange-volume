@@ -1,0 +1,10 @@
+baseMA = ema(baseVolume, emaLength)
+quoteVolume = baseVolume * ((high+low+close)/3) // Uses HLC average price approximation
+quoteMA = ema(quoteVolume, emaLength)
+
+totalVolume = useQuoteVolume ? quoteVolume : baseVolume
+MA = useQuoteVolume ? quoteMA : baseMA
+
+// PLOT CHARTS
+plot(series=totalVolume, title="Volume", style=plot.style_histogram, linewidth=1, transp=0, color=color.white)
+plot(series=MA, title="Moving Average", style=plot.style_linebr, linewidth=1, transp=20, color=color.white)
